@@ -1,3 +1,14 @@
 just a file
 
-http://techsupport.aaronvanleijenhorst.com/
+SELECT
+person_has_kaasjes.id,
+person_has_kaasjes.person_id,
+person_has_kaasjes.kaasjes_id,
+kaasen.id,
+kaasen.`name`
+FROM
+person_has_kaasjes
+LEFT JOIN kaasen ON person_has_kaasjes.kaasjes_id = kaasen.id
+WHERE
+person_has_kaasjes.person_id = 1;
+
